@@ -10,15 +10,20 @@ using System.Windows.Forms;
 
 namespace ProjetilPBL
 {
-    public partial class Form1 : Form
+    public partial class Menu1 : Form
     {
-        public Form1()
+        double thetaMinGraus = 0;
+        double distancia;
+        double altura;
+
+
+        public Menu1()
         {
             InitializeComponent();
-            
+
         }
 
-       
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -26,7 +31,28 @@ namespace ProjetilPBL
 
         private void chart1_Click(object sender, EventArgs e)
         {
-
+            
         }
+
+        public void BtnGerarAngulo_Click(object sender, EventArgs e)
+        {
+
+           Menu2 menu2= new Menu2();
+            double[] DistAlt = new double[2];
+
+            double distancia = double.Parse(TxtDistancia.Text);
+            double altura = double.Parse(TxtAltura.Text);
+
+            
+            menu2.Show();
+            this.Hide();
+           
+        }
+        
+        public double getDistancia()
+        {
+            return distancia;
+        }
+
     }
 }
