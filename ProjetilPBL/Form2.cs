@@ -15,15 +15,17 @@ namespace ProjetilPBL
     {
         Program calculos = new Program();
         
+        
 
         public Menu2()
         { 
-            InitializeComponent();  
+            InitializeComponent();
             
         }
 
         private void BtnGerarGrafico_Click(object sender, EventArgs e)
         {
+            calculos.
 
         }
     }
