@@ -12,9 +12,9 @@ namespace ProjetilPBL
 {
     public partial class Menu1 : Form
     {
-        double thetaMinGraus = 0;
-        double distancia;
-        double altura;
+        
+        public double distancia = 6;
+        public double altura;
 
 
         public Menu1()
@@ -38,14 +38,14 @@ namespace ProjetilPBL
         {
 
            Menu2 menu2= new Menu2();
-            double[] DistAlt = new double[2];
 
-            double distancia = double.Parse(TxtDistancia.Text);
-            double altura = double.Parse(TxtAltura.Text);
+            distancia = double.Parse(TxtDistancia.Text);
+            altura = double.Parse(TxtAltura.Text);
 
             
-            menu2.Show();
             this.Hide();
+            menu2.Show();
+            
            
         }
         
@@ -53,6 +53,9 @@ namespace ProjetilPBL
         {
             return distancia;
         }
-
+        public double getAltura()
+        {
+            return altura;
+        }
     }
 }
