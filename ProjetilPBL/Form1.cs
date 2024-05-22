@@ -13,7 +13,7 @@ namespace ProjetilPBL
     public partial class Menu1 : Form
     {
         
-        public double distancia = 6;
+        public static double distancia;
         public double altura;
 
 
@@ -27,6 +27,7 @@ namespace ProjetilPBL
 
         private void Form1_Load(object sender, EventArgs e)
         {
+    
         }
 
         private void chart1_Click(object sender, EventArgs e)
@@ -49,8 +50,9 @@ namespace ProjetilPBL
            
         }
         
-        public double getDistancia()
+        public static double getDistancia()
         {
+            
             return distancia;
         }
         public double getAltura()
