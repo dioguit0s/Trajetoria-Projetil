@@ -14,27 +14,37 @@ namespace ProjetilPBL
     public partial class Menu2 : Form
     {
         Program calculos = new Program();
-        
-        
+        public static double thetaMinGraus;
+        public static double theta;
         
 
         public Menu2()
         { 
             InitializeComponent();
 
-            //double distancia = medidas.getDistancia();
-            //double altura = medidas.getAltura();
-            //double thetaMinGraus = calculos.CalcAnguloMinima(distancia, altura);
-            
-            MessageBox.Show(Menu1.getDistancia().ToString());
+            double distancia = Menu1.getDistancia();
+            double altura = Menu1.getAltura();
+            thetaMinGraus = calculos.CalcAnguloMinima(distancia, altura);
+            LblAngMinimo.Text = thetaMinGraus.ToString(); 
 
         }
 
         private void BtnGerarGrafico_Click(object sender, EventArgs e)
         {
+            theta = double.Parse(TxtAngulo.Text);
+            if (theta < thetaMinGraus)
+            {
+                MessageBox.Show("Insira um valor acima do minimo");
+            } else 
+            { 
 
+            }
             
 
+        }
+        public static double getAngulo()
+        {
+            return thetaMinGraus;
         }
     }
 }

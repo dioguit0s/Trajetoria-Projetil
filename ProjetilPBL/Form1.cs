@@ -14,7 +14,7 @@ namespace ProjetilPBL
     {
         
         public static double distancia;
-        public double altura;
+        public static double altura;
 
 
         public Menu1()
@@ -38,13 +38,13 @@ namespace ProjetilPBL
         public void BtnGerarAngulo_Click(object sender, EventArgs e)
         {
 
-           Menu2 menu2= new Menu2();
 
             distancia = double.Parse(TxtDistancia.Text);
             altura = double.Parse(TxtAltura.Text);
 
             
             this.Hide();
+            Menu2 menu2= new Menu2();
             menu2.Show();
             
            
@@ -55,7 +55,7 @@ namespace ProjetilPBL
             
             return distancia;
         }
-        public double getAltura()
+        public static double getAltura()
         {
             return altura;
         }
