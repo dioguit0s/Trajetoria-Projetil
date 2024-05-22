@@ -24,7 +24,7 @@ namespace ProjetilPBL
 
             double distancia = Menu1.getDistancia();
             double altura = Menu1.getAltura();
-            thetaMinGraus = calculos.CalcAnguloMinima(distancia, altura);
+            thetaMinGraus = Calculos.CalcAnguloMinima(distancia, altura);
             LblAngMinimo.Text = thetaMinGraus.ToString(); 
 
         }
@@ -37,6 +37,9 @@ namespace ProjetilPBL
                 MessageBox.Show("Insira um valor acima do minimo");
             } else 
             { 
+                FormGrafico menu3 = new FormGrafico();
+                this.Hide();
+                menu3.Show();
 
             }
             
@@ -44,7 +47,12 @@ namespace ProjetilPBL
         }
         public static double getAngulo()
         {
-            return thetaMinGraus;
+            return theta;
+        }
+
+        private void BtnSair_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

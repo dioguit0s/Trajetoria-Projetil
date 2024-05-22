@@ -36,15 +36,16 @@
             this.TxtAltura = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.BtnSair = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnGerarAngulo
             // 
-            this.BtnGerarAngulo.Location = new System.Drawing.Point(443, 178);
-            this.BtnGerarAngulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnGerarAngulo.Location = new System.Drawing.Point(591, 219);
+            this.BtnGerarAngulo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnGerarAngulo.Name = "BtnGerarAngulo";
-            this.BtnGerarAngulo.Size = new System.Drawing.Size(81, 32);
+            this.BtnGerarAngulo.Size = new System.Drawing.Size(108, 39);
             this.BtnGerarAngulo.TabIndex = 0;
             this.BtnGerarAngulo.Text = "Próximo";
             this.BtnGerarAngulo.UseVisualStyleBackColor = true;
@@ -53,65 +54,74 @@
             // LblDistancia
             // 
             this.LblDistancia.AutoSize = true;
-            this.LblDistancia.Location = new System.Drawing.Point(403, 107);
-            this.LblDistancia.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LblDistancia.Location = new System.Drawing.Point(537, 132);
             this.LblDistancia.Name = "LblDistancia";
-            this.LblDistancia.Size = new System.Drawing.Size(62, 13);
+            this.LblDistancia.Size = new System.Drawing.Size(77, 16);
             this.LblDistancia.TabIndex = 1;
             this.LblDistancia.Text = "Distancia(x)";
             // 
             // LblAltura
             // 
             this.LblAltura.AutoSize = true;
-            this.LblAltura.Location = new System.Drawing.Point(403, 140);
-            this.LblAltura.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LblAltura.Location = new System.Drawing.Point(537, 172);
             this.LblAltura.Name = "LblAltura";
-            this.LblAltura.Size = new System.Drawing.Size(46, 13);
+            this.LblAltura.Size = new System.Drawing.Size(56, 16);
             this.LblAltura.TabIndex = 2;
             this.LblAltura.Text = "Altura(h)";
             this.LblAltura.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // TxtDistancia
             // 
-            this.TxtDistancia.Location = new System.Drawing.Point(473, 105);
-            this.TxtDistancia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtDistancia.Location = new System.Drawing.Point(631, 129);
+            this.TxtDistancia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtDistancia.Name = "TxtDistancia";
-            this.TxtDistancia.Size = new System.Drawing.Size(69, 20);
+            this.TxtDistancia.Size = new System.Drawing.Size(91, 22);
             this.TxtDistancia.TabIndex = 3;
             // 
             // TxtAltura
             // 
-            this.TxtAltura.Location = new System.Drawing.Point(473, 140);
-            this.TxtAltura.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtAltura.Location = new System.Drawing.Point(631, 172);
+            this.TxtAltura.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtAltura.Name = "TxtAltura";
-            this.TxtAltura.Size = new System.Drawing.Size(69, 20);
+            this.TxtAltura.Size = new System.Drawing.Size(91, 22);
             this.TxtAltura.TabIndex = 4;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(378, 64);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(504, 79);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(138, 13);
+            this.label1.Size = new System.Drawing.Size(177, 16);
             this.label1.TabIndex = 9;
             this.label1.Text = "Com base no imagem insira:";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 36);
+            this.pictureBox1.Location = new System.Drawing.Point(16, 44);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(324, 268);
+            this.pictureBox1.Size = new System.Drawing.Size(432, 330);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
             // 
+            // BtnSair
+            // 
+            this.BtnSair.Location = new System.Drawing.Point(694, 402);
+            this.BtnSair.Name = "BtnSair";
+            this.BtnSair.Size = new System.Drawing.Size(75, 23);
+            this.BtnSair.TabIndex = 11;
+            this.BtnSair.Text = "Sair";
+            this.BtnSair.UseVisualStyleBackColor = true;
+            this.BtnSair.Click += new System.EventHandler(this.BtnSair_Click);
+            // 
             // Menu1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.BtnSair);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.TxtAltura);
@@ -119,7 +129,7 @@
             this.Controls.Add(this.LblAltura);
             this.Controls.Add(this.LblDistancia);
             this.Controls.Add(this.BtnGerarAngulo);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Menu1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "App";
@@ -139,6 +149,7 @@
         private System.Windows.Forms.TextBox TxtAltura;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button BtnSair;
     }
 }
 

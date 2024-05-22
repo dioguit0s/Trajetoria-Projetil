@@ -33,14 +33,15 @@
             this.LblAnguloDigitado = new System.Windows.Forms.Label();
             this.LblAnguloMinim = new System.Windows.Forms.Label();
             this.LblAngMinimo = new System.Windows.Forms.Label();
+            this.BtnSair = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // BtnGerarGrafico
             // 
-            this.BtnGerarGrafico.Location = new System.Drawing.Point(419, 208);
-            this.BtnGerarGrafico.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnGerarGrafico.Location = new System.Drawing.Point(559, 256);
+            this.BtnGerarGrafico.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnGerarGrafico.Name = "BtnGerarGrafico";
-            this.BtnGerarGrafico.Size = new System.Drawing.Size(86, 20);
+            this.BtnGerarGrafico.Size = new System.Drawing.Size(115, 25);
             this.BtnGerarGrafico.TabIndex = 13;
             this.BtnGerarGrafico.Text = "Gerar gráfico";
             this.BtnGerarGrafico.UseVisualStyleBackColor = true;
@@ -48,54 +49,65 @@
             // 
             // TxtAngulo
             // 
-            this.TxtAngulo.Location = new System.Drawing.Point(439, 158);
-            this.TxtAngulo.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtAngulo.Location = new System.Drawing.Point(585, 194);
+            this.TxtAngulo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtAngulo.Name = "TxtAngulo";
-            this.TxtAngulo.Size = new System.Drawing.Size(76, 20);
+            this.TxtAngulo.Size = new System.Drawing.Size(100, 22);
             this.TxtAngulo.TabIndex = 12;
             // 
             // LblAnguloDigitado
             // 
             this.LblAnguloDigitado.AutoSize = true;
-            this.LblAnguloDigitado.Location = new System.Drawing.Point(341, 160);
-            this.LblAnguloDigitado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LblAnguloDigitado.Location = new System.Drawing.Point(455, 197);
             this.LblAnguloDigitado.Name = "LblAnguloDigitado";
-            this.LblAnguloDigitado.Size = new System.Drawing.Size(86, 13);
+            this.LblAnguloDigitado.Size = new System.Drawing.Size(110, 16);
             this.LblAnguloDigitado.TabIndex = 11;
             this.LblAnguloDigitado.Text = "Angulo desejado";
             // 
             // LblAnguloMinim
             // 
             this.LblAnguloMinim.AutoSize = true;
-            this.LblAnguloMinim.Location = new System.Drawing.Point(355, 129);
-            this.LblAnguloMinim.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LblAnguloMinim.Location = new System.Drawing.Point(473, 159);
             this.LblAnguloMinim.Name = "LblAnguloMinim";
-            this.LblAnguloMinim.Size = new System.Drawing.Size(100, 13);
+            this.LblAnguloMinim.Size = new System.Drawing.Size(124, 16);
             this.LblAnguloMinim.TabIndex = 10;
             this.LblAnguloMinim.Text = "O angulo minimo é: ";
             // 
             // LblAngMinimo
             // 
             this.LblAngMinimo.AutoSize = true;
-            this.LblAngMinimo.Location = new System.Drawing.Point(460, 129);
+            this.LblAngMinimo.Location = new System.Drawing.Point(613, 159);
+            this.LblAngMinimo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblAngMinimo.Name = "LblAngMinimo";
-            this.LblAngMinimo.Size = new System.Drawing.Size(41, 13);
+            this.LblAngMinimo.Size = new System.Drawing.Size(53, 16);
             this.LblAngMinimo.TabIndex = 14;
             this.LblAngMinimo.Text = "asdsda";
             // 
+            // BtnSair
+            // 
+            this.BtnSair.Location = new System.Drawing.Point(692, 401);
+            this.BtnSair.Name = "BtnSair";
+            this.BtnSair.Size = new System.Drawing.Size(75, 23);
+            this.BtnSair.TabIndex = 15;
+            this.BtnSair.Text = "Sair";
+            this.BtnSair.UseVisualStyleBackColor = true;
+            this.BtnSair.Click += new System.EventHandler(this.BtnSair_Click);
+            // 
             // Menu2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.BtnSair);
             this.Controls.Add(this.LblAngMinimo);
             this.Controls.Add(this.BtnGerarGrafico);
             this.Controls.Add(this.TxtAngulo);
             this.Controls.Add(this.LblAnguloDigitado);
             this.Controls.Add(this.LblAnguloMinim);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Menu2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form2";
+            this.Text = "App";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -108,5 +120,6 @@
         private System.Windows.Forms.Label LblAnguloDigitado;
         private System.Windows.Forms.Label LblAnguloMinim;
         private System.Windows.Forms.Label LblAngMinimo;
+        private System.Windows.Forms.Button BtnSair;
     }
 }

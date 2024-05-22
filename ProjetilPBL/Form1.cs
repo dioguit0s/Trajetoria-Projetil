@@ -59,5 +59,10 @@ namespace ProjetilPBL
         {
             return altura;
         }
+
+        private void BtnSair_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
