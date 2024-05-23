@@ -16,25 +16,26 @@ namespace ProjetilPBL
         //trazendo variaveis necessarias para os calculos finais
         static double distancia = Menu1.getDistancia();
         static double altura = Menu1.getAltura();
-        static double angulo = Menu2.getAngulo();
+        static double thethaGraus = Menu2.getAngulo();
+
+        //Transforma o angulo recebido pelo user em Rad
+        static double thetha = Calculos.TransGrausRad(thethaGraus);
 
 
 
         public FormGrafico()
         {
-            MessageBox.Show($"{distancia}\n{altura}\n{angulo}");
+            
+            double v0 = Calculos.VelocidadeMinima(distancia, altura, thetha);
+            double tempo = Calculos.CalcTempo(distancia, v0, thetha);
+            string direcao = Calculos.AscDesc(tempo, v0);
 
-           double v0 = Math.Sqrt((g * distancia * distancia) / (2 * (distancia * Math.Tan(angulo) - altura) * Math.Cos(angulo) * Math.Cos(angulo)));
-
-            // double tempo = Calculos.CalcTempo(distancia, velocidade, angulo);
-            //double direcao = Calculos.AscDesc(tempo, velocidade);
-
-            MessageBox.Show($"{v0}\n");
+            MessageBox.Show($"{v0:F2}\n{tempo:F1}\n{direcao}");
 
             InitializeComponent();
-            /*LblTeste.Text = $"A velocidade do projetil é :{velocidade}\n" +
-                            $"O tempo que o projetil demora até o alvo é: {tempo}" +
-                            $"A direção do projetil é: {direcao} ";*/
+            LblTeste.Text = $"A velocidade do projetil é :{v0:F2}\n" +
+                            $"O tempo que o projetil demora até o alvo é: {tempo:F1}\n" +
+                            $"{direcao}";
         }
 
         

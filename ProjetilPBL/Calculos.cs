@@ -31,6 +31,14 @@ namespace ProjetilPBL
             return thetha;
         }
 
+        //Transforma de Graus para Rad
+        public static double TransGrausRad(double thethaGraus)
+        {
+            double thetha = thethaGraus * (Math.PI/180);
+            return thetha;
+        }
+
+
         //Calculo velocidade projetil
         public static double VelocidadeMinima(double distancia, double altura, double theta)
         {
@@ -46,10 +54,19 @@ namespace ProjetilPBL
         }
 
         //Calculo que descobre se o projetil está ascendente ou descendente
-        public static double AscDesc(double tempo, double v0)
+        public static string AscDesc(double tempo, double v0)
         {
             double vt = v0 - g * tempo;
-            return vt;
+            string direção;
+            if (vt > 0)
+            {
+                direção = "O projétil atinge o alvo em ascendência.";
+            }
+            else
+            {
+                direção = "O projétil atinge o alvo em descendência.";
+            }
+            return direção;
         }
     }
 }
