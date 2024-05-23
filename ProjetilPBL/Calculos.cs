@@ -24,6 +24,13 @@ namespace ProjetilPBL
             return thetaMinGraus;
         }
 
+        //Transforma graus em rad
+        public static double TransGrausRad(double thethaMinGraus)
+        {
+            double thetha = thethaMinGraus * (180 / Math.PI);
+            return thetha;
+        }
+
         //Calculo velocidade projetil
         public static double VelocidadeMinima(double distancia, double altura, double theta)
         {
