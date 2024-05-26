@@ -46,8 +46,8 @@ namespace ProjetilPBL
                 dir = "Descendente";
             }
 
-            LblInfos.Text = $"A velocidade do projetil é de {v0}\n" +
-                            $"Ele atinge o projetil em {tempo}\n" +
+            LblInfos.Text = $"A velocidade do projetil é de {v0:F4}\n" +
+                            $"Ele atinge o projetil em {tempo:F2} \n" +
                             $"E sua direção é {dir}\n";
             //Adicionando o ponto alvo
             grafico.Series.Add("Alvo");
