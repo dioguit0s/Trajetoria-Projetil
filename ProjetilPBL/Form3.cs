@@ -49,6 +49,15 @@ namespace ProjetilPBL
             LblInfos.Text = $"A velocidade do projetil é de {v0:F4}\n" +
                             $"Ele atinge o projetil em {tempo:F2} \n" +
                             $"E sua direção é {dir}\n";
+
+            //Configurando o grafico
+            var obj_chart = grafico.ChartAreas["ChartArea1"];
+
+            obj_chart.AxisX.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+            obj_chart.AxisX.Minimum = 0;
+
+            obj_chart.AxisY.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+            obj_chart.AxisY.Minimum = 0;
             //Adicionando o ponto alvo
             grafico.Series.Add("Alvo");
             grafico.Series["Alvo"].Color = Color.Blue;
@@ -60,11 +69,13 @@ namespace ProjetilPBL
             grafico.Series["Trajetória"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
             grafico.Series["Trajetória"].Color = Color.Red;
             //loop que adiciona na o traço
-            for (int x = 1; x <= distancia + 50; x++)
+            for (int x = 0; x <= distancia + 50; x++)
             {
                 double y = x * Math.Tan(thetha) - (g * Math.Pow(x, 2)) / (2 * Math.Pow(v0 * Math.Cos(thetha), 2));
 
                 grafico.Series["Trajetória"].Points.AddXY(x, y);
+
+                
             }
         }
 
