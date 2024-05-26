@@ -34,6 +34,7 @@
             this.grafico = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.BtnGrafico = new System.Windows.Forms.Button();
             this.BtnMenu = new System.Windows.Forms.Button();
+            this.LblInfos = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.grafico)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,11 +74,20 @@
             this.BtnMenu.UseVisualStyleBackColor = true;
             this.BtnMenu.Click += new System.EventHandler(this.BtnMenu_Click);
             // 
+            // LblInfos
+            // 
+            this.LblInfos.AutoSize = true;
+            this.LblInfos.Location = new System.Drawing.Point(81, 50);
+            this.LblInfos.Name = "LblInfos";
+            this.LblInfos.Size = new System.Drawing.Size(0, 16);
+            this.LblInfos.TabIndex = 3;
+            // 
             // FormGrafico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1331, 519);
+            this.Controls.Add(this.LblInfos);
             this.Controls.Add(this.BtnMenu);
             this.Controls.Add(this.BtnGrafico);
             this.Controls.Add(this.grafico);
@@ -85,6 +95,7 @@
             this.Text = "App";
             ((System.ComponentModel.ISupportInitialize)(this.grafico)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -93,5 +104,6 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart grafico;
         private System.Windows.Forms.Button BtnGrafico;
         private System.Windows.Forms.Button BtnMenu;
+        private System.Windows.Forms.Label LblInfos;
     }
 }

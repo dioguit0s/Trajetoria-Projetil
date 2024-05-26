@@ -20,7 +20,7 @@ namespace ProjetilPBL
         static double angulo = Menu2.getAngulo();
 
         //Transforma o angulo recebido pelo user em Rad
-        double thetha = Calculos.TransGrausRad(thethaGraus);
+        double thetha = Calculos.TransGrausRad(angulo);
 
 
         public FormGrafico()
@@ -35,9 +35,20 @@ namespace ProjetilPBL
         {
             double v0 = Calculos.VelocidadeMinima(distancia, altura, thetha);
             double tempo = Calculos.CalcTempo(distancia, v0, thetha);
-            string direcao = Calculos.AscDesc(tempo, v0);
+            double direcao = Calculos.AscDesc(tempo, v0);
+            string dir;
+            if (direcao > 0)
+            {
+                dir = "Ascendente";
+            }
+            else
+            {
+                dir = "Descendente";
+            }
 
-            MessageBox.Show($"{v0:F2}\n{tempo:F1}\n{direcao}");
+            LblInfos.Text = $"A velocidade do projetil é de {v0}\n" +
+                            $"Ele atinge o projetil em {tempo}\n" +
+                            $"E sua direção é {dir}\n";
             //Adicionando o ponto alvo
             grafico.Series.Add("Alvo");
             grafico.Series["Alvo"].Color = Color.Blue;
@@ -49,9 +60,9 @@ namespace ProjetilPBL
             grafico.Series["Trajetória"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
             grafico.Series["Trajetória"].Color = Color.Red;
             //loop que adiciona na o traço
-            for(int x = 1; x <= distancia + 50; x++)
+            for (int x = 1; x <= distancia + 50; x++)
             {
-                double y = x * Math.Tan(thetha) - (g * Math.Pow(x, 2)) / (2 * Math.Pow(v0  * Math.Cos(thetha), 2));
+                double y = x * Math.Tan(thetha) - (g * Math.Pow(x, 2)) / (2 * Math.Pow(v0 * Math.Cos(thetha), 2));
 
                 grafico.Series["Trajetória"].Points.AddXY(x, y);
             }
